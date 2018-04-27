@@ -12,14 +12,21 @@ body, header, footer {
 header {
   margin-top: 2rem;
   text-align: center; }
-  header img {
-    display: block; }
+  header button {
+    background: none;
+    border: none; }
+    header button img {
+      display: block; }
   header h1 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding: 2rem;
     font-weight: lighter; }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1rem; } }
 
 #images-container {
   margin-top: 3rem;
@@ -32,7 +39,8 @@ header {
   #images-container img {
     display: block;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    object-fit: cover; }
   #images-container ul {
     max-width: 800px;
     display: flex;
@@ -46,6 +54,12 @@ header {
       margin-bottom: 1rem;
       overflow: hidden;
       position: relative; }
+      @media (max-width: 530px) {
+        #images-container ul li {
+          height: 150px; } }
+      @media (max-width: 350px) {
+        #images-container ul li {
+          height: 100px; } }
       #images-container ul li:not(:nth-child(3n)) {
         margin-right: 1rem; }
       #images-container ul li div {
@@ -56,7 +70,6 @@ header {
         bottom: 0; }
         #images-container ul li div img {
           display: inline-block;
-          color: #f8f8f8;
           margin-right: 0.5rem;
           height: 16px;
           width: 16px; }
