@@ -35,11 +35,28 @@ fetch(urlSearch)
 
 document.getElementById('logo-animation').addEventListener('click',function(){
 
-    let firstNumber = Math.floor((Math.random() * 9) + 1);
-    let secondNumber = Math.floor((Math.random() * 9) + 1);
-    
-    document.querySelector('#logo-animation img').classList.toggle('animate-logo');
-    document.querySelector(`#images-container ul li:nth-of-type(${firstNumber}n)`).classList.toggle('animate-logo');
-    document.querySelector(`#images-container ul li:nth-of-type(${secondNumber}n)`).classList.toggle('animate-logo');
+    let list = document.querySelectorAll('#images-container ul li');
+    let logoMove = document.querySelector('#logo-animation img')
 
+   
+
+    if(logoMove.className == 'animate-logo'){
+
+        document.querySelector('#logo-animation img').classList.remove('animate-logo');
+
+        for(i=0; i<list.length; i++){
+            list[i].classList.remove('animate-logo');
+        }
+        
+    }
+
+    else{
+
+        let firstNumber = Math.floor((Math.random() * 9) + 1);
+        let secondNumber = Math.floor((Math.random() * 9) + 1);
+
+        document.querySelector('#logo-animation img').classList.toggle('animate-logo');
+        document.querySelector(`#images-container ul li:nth-of-type(${firstNumber}n)`).classList.toggle('animate-logo');
+        document.querySelector(`#images-container ul li:nth-of-type(${secondNumber}n)`).classList.toggle('animate-logo');
+    }  
 })
