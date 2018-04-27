@@ -1,0 +1,26 @@
+{
+  "name": "araqueheinz_responsiveimages",
+  "version": "1.0.0",
+  "description": "Heinz Araque Project: Responsive Image Gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/araqueheinz/AraqueHeinz_ResponsiveImages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/araqueheinz/AraqueHeinz_ResponsiveImages/issues"
+  },
+  "homepage": "https://github.com/araqueheinz/AraqueHeinz_ResponsiveImages#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.23.7"
+  }
+}

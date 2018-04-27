@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body, header, footer{
+    font: 1.6rem/1.4 Arial, Helvetica, sans-serif;
+  
+}
+
+header{
+    margin-top: 2rem;
+    text-align: center;
+    img{
+        display: block;
+        
+
+    }
+
+    h1{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-weight: lighter;
+     
+    }
+    
+}
+#images-container{
+    
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img{
+        display: block;
+        height:100%;
+        width: 100%
+          
+        
+    }
+    
+    
+
+    ul{
+        max-width: 800px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        
+        li{
+            list-style: none;
+            width: calc(100%/3 - 2rem);
+            height: 200px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            position: relative;
+
+            &:not(:nth-child(3n)){
+                margin-right: 1rem;
+            }
+            
+
+            div{
+
+                background-color:rgba(0, 0, 0, 0.301);
+                padding: 1rem;
+                overflow: hidden;
+                position: relative;
+                bottom:0;
+              
+
+                img{
+                    display: inline-block;
+                    color: rgb(248, 248, 248);
+                    margin-right: 0.5rem;
+                    height: 16px;
+                    width: 16px;
+                }
+                p{
+                    color: rgb(248, 248, 248);
+                }
+
+            }
+
+            &:hover{
+                div{
+                    transform: translateY(-5.5rem);
+                    transition-duration: 1.2s;
+                    animation-timing-function: linear;
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+footer{
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    h2{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: lighter;
+        position: relative;
+        top: 5rem;
+
+        strong{
+            font-weight: bold;
+        }
+    }
+}
