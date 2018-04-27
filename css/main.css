@@ -9,9 +9,22 @@ html {
 body, header, footer {
   font: 1.6rem/1.4 Arial, Helvetica, sans-serif; }
 
+.animate-logo {
+  animation-name: rotate;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
+
 header {
   margin-top: 2rem;
-  text-align: center; }
+  text-align: center;
+  perspective: 1000px; }
   header button {
     background: none;
     border: none; }
@@ -35,7 +48,8 @@ header {
   margin-right: auto;
   position: relative;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  perspective: 1000px; }
   #images-container img {
     display: block;
     height: 100%;
@@ -71,6 +85,7 @@ header {
         #images-container ul li div img {
           display: inline-block;
           margin-right: 0.5rem;
+          fill: #f8f8f8;
           height: 16px;
           width: 16px; }
         #images-container ul li div p {

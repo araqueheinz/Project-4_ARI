@@ -33,4 +33,13 @@ fetch(urlSearch)
     search.innerHTML = content;
 })
 
+document.getElementById('logo-animation').addEventListener('click',function(){
 
+    let firstNumber = Math.floor((Math.random() * 9) + 1);
+    let secondNumber = Math.floor((Math.random() * 9) + 1);
+    
+    document.querySelector('#logo-animation img').classList.toggle('animate-logo');
+    document.querySelector(`#images-container ul li:nth-of-type(${firstNumber}n)`).classList.toggle('animate-logo');
+    document.querySelector(`#images-container ul li:nth-of-type(${secondNumber}n)`).classList.toggle('animate-logo');
+
+})
